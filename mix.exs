@@ -33,6 +33,6 @@ defmodule FlowProducers.Mixfile do
    files: ["lib", "mix.exs", "README*", "LICENSE*"],
    maintainers: ["Ivan Yurov"],
    licenses: ["MIT"],
-   links: %{"GitHub" => "https://github.com/youroff/monex"}
+   links: %{"GitHub" => "https://github.com/youroff/flow_producers"}
   ]
 end
