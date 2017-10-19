@@ -7,6 +7,8 @@ defmodule FlowProducers.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
     ]
   end
@@ -21,5 +23,16 @@ defmodule FlowProducers.Mixfile do
     {:gen_stage, "~> 0.12.2"},
     {:flow, "~> 0.12", only: :test},
     {:test_probe, "~> 0.0.2", only: :test}
+  ]
+
+  defp description, do: """
+    Queue and Poller behaviours for Elixir Flow
+  """
+
+  defp package, do: [
+   files: ["lib", "mix.exs", "README*", "LICENSE*"],
+   maintainers: ["Ivan Yurov"],
+   licenses: ["MIT"],
+   links: %{"GitHub" => "https://github.com/youroff/monex"}
   ]
 end
