@@ -16,8 +16,8 @@ defmodule FlowProducers.Mixfile do
   ]
 
   defp deps, do: [
-    {:gen_stage, "> 0.14.0"},
-    {:flow, "> 0.14.0", only: :test},
+    {:gen_stage, ">= 0.14.0"},
+    {:flow, ">= 0.14.0", only: :test},
     {:test_probe, "~> 0.0.2", only: :test},
     {:ex_doc, "~> 0.19", only: :dev}
   ]
