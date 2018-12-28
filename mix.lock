@@ -1,4 +1,11 @@
-%{"flow": {:hex, :flow, "0.12.0", "32c5a5f3ff6693e004b6c17a8c64dce2f8cdaf9564912d79427176013a586ab6", [], [{:gen_stage, "~> 0.12.0", [hex: :gen_stage, repo: "hexpm", optional: false]}], "hexpm"},
-  "gen_stage": {:hex, :gen_stage, "0.12.2", "e0e347cbb1ceb5f4e68a526aec4d64b54ad721f0a8b30aa9d28e0ad749419cbb", [], [], "hexpm"},
+%{
+  "earmark": {:hex, :earmark, "1.3.1", "73812f447f7a42358d3ba79283cfa3075a7580a3a2ed457616d6517ac3738cb9", [:mix], [], "hexpm"},
+  "ex_doc": {:hex, :ex_doc, "0.19.2", "6f4081ccd9ed081b6dc0bd5af97a41e87f5554de469e7d76025fba535180565f", [:mix], [{:earmark, "~> 1.2", [hex: :earmark, repo: "hexpm", optional: false]}, {:makeup_elixir, "~> 0.10", [hex: :makeup_elixir, repo: "hexpm", optional: false]}], "hexpm"},
+  "flow": {:hex, :flow, "0.14.3", "0d92991fe53035894d24aa8dec10dcfccf0ae00c4ed436ace3efa9813a646902", [:mix], [{:gen_stage, "~> 0.14.0", [hex: :gen_stage, repo: "hexpm", optional: false]}], "hexpm"},
+  "gen_stage": {:hex, :gen_stage, "0.14.1", "9d46723fda072d4f4bb31a102560013f7960f5d80ea44dcb96fd6304ed61e7a4", [:mix], [], "hexpm"},
+  "makeup": {:hex, :makeup, "0.6.0", "e0fd985525e8d42352782bd76253105fbab0a783ac298708ca9020636c9568af", [:mix], [{:nimble_parsec, "~> 0.5.0", [hex: :nimble_parsec, repo: "hexpm", optional: false]}], "hexpm"},
+  "makeup_elixir": {:hex, :makeup_elixir, "0.11.0", "aa3446f67356afa5801618867587a8863f176f9c632fb62b20f49bd1ea335e8a", [:mix], [{:makeup, "~> 0.6", [hex: :makeup, repo: "hexpm", optional: false]}], "hexpm"},
   "monex": {:hex, :monex, "0.1.10", "f0e899ad9dc067c285d1915e35483c5346f04838f7e938b398504d43e438d28c", [], [], "hexpm"},
-  "test_probe": {:hex, :test_probe, "0.0.2", "58b3db9e7c335fe0585bdaef8573a952932b20f7ffdcbecf5410c30aaa58a99d", [], [{:monex, "~> 0.1.10", [hex: :monex, repo: "hexpm", optional: false]}], "hexpm"}}
+  "nimble_parsec": {:hex, :nimble_parsec, "0.5.0", "90e2eca3d0266e5c53f8fbe0079694740b9c91b6747f2b7e3c5d21966bba8300", [:mix], [], "hexpm"},
+  "test_probe": {:hex, :test_probe, "0.0.2", "58b3db9e7c335fe0585bdaef8573a952932b20f7ffdcbecf5410c30aaa58a99d", [], [{:monex, "~> 0.1.10", [hex: :monex, repo: "hexpm", optional: false]}], "hexpm"},
+}

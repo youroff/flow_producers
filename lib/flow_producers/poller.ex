@@ -1,5 +1,5 @@
 defmodule FlowProducers.Poller do
-  @callback poll(integer) :: [term]
+  @callback poll(integer) :: [any]
 
   defmacro __using__(_) do
     quote do

@@ -11,12 +11,14 @@ defmodule FlowProducersQueueTest do
     process = self()
     {:ok, queue} = GenStage.start_link(QueueProd, :ok)
     task = Task.async(fn ->
-      window = Flow.Window.global |> Flow.Window.trigger_every(3)
+      window = Flow.Window.global() |> Flow.Window.trigger_every(3)
       Flow.from_stage(queue)
       |> Flow.partition(window: window, stages: 1)
       |> Flow.reduce(fn -> 0 end, & &1 + &2)
-      |> Flow.emit(:state)
-      |> Flow.each(&send process, &1)
+      |> Flow.on_trigger(fn st ->
+        send process, st
+        {[], st}
+      end)
       |> Flow.run()
     end)
 

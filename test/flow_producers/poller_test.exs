@@ -30,8 +30,10 @@ defmodule FlowProducersPollerTest do
       Flow.from_stage(poller)
       |> Flow.partition(window: window, stages: 1)
       |> Flow.reduce(fn -> 0 end, & &1 + &2)
-      |> Flow.emit(:state)
-      |> Flow.each(&send probe, &1)
+      |> Flow.on_trigger(fn st ->
+        send probe, st
+        {[], st}
+      end)
       |> Flow.run()
     end)
 
