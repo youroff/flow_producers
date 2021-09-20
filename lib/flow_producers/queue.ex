@@ -43,7 +43,7 @@ defmodule FlowProducers.Queue do
 
       defp poller, do: false
 
-      defoverridable [poller: 0]
+      defoverridable [poller: 0, init: 1]
     end
   end
 end
