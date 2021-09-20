@@ -27,7 +27,7 @@ defmodule FlowProducersPollerTest do
 
     task = Task.async(fn ->
       window = Flow.Window.global |> Flow.Window.trigger_every(3)
-      Flow.from_stage(poller)
+      Flow.from_stages([poller])
       |> Flow.partition(window: window, stages: 1)
       |> Flow.reduce(fn -> 0 end, & &1 + &2)
       |> Flow.on_trigger(fn st ->
