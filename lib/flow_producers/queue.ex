@@ -12,6 +12,18 @@ defmodule FlowProducers.Queue do
     quote do
       use GenStage
 
+      def enqueue(events) when is_list(events) do
+        FlowProducers.Queue.enqueue(__MODULE__, events)
+      end
+
+      def enqueue(event) do
+        enqueue([event])
+      end
+
+      def start_link(_) do
+        GenStage.start_link(__MODULE__, [], name: __MODULE__)
+      end
+
       def init(_) do
         {:producer, {:queue.new(), 0}}
       end

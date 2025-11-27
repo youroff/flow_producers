@@ -3,7 +3,7 @@ defmodule FlowProducers.Mixfile do
 
   def project, do: [
     app: :flow_producers,
-    version: "0.1.2",
+    version: "0.1.3",
     elixir: "~> 1.5",
     start_permanent: Mix.env == :prod,
     description: description(),
@@ -16,8 +16,8 @@ defmodule FlowProducers.Mixfile do
   ]
 
   defp deps, do: [
-    {:gen_stage, "~> 1.1"},
-    {:flow, "~> 1.1", only: :test},
+    {:gen_stage, "~> 1.3"},
+    {:flow, "~> 1.2", only: :test},
     {:test_probe, "~> 0.0.2", only: :test},
     {:ex_doc, "~> 0.25", only: :dev}
   ]
